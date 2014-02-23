@@ -38,7 +38,7 @@ class WooCommerce_Thumbnail_Input_Quantity {
 	 * Include required core files used in admin and on the frontend.
 	 */
 	public function includes() {
-		
+
 		// Update $this->incremental_active
 		$this->check_other_plugin_status();
 
@@ -49,7 +49,8 @@ class WooCommerce_Thumbnail_Input_Quantity {
 	*/
 	public function check_other_plugin_status() {
 		
-		if ( in_array( 'woocommerce-incremental-product-quantities/product-quantity-rules.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		if ( in_array( 'woocommerce-incremental-product-quantities/product-quantity-rules.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) or 
+			 in_array( 'woocommerce-incremental-product-quantities/incremental-product-quantities.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 			
 			$this->incremental_active = true;
 		} else {
@@ -86,9 +87,9 @@ class WooCommerce_Thumbnail_Input_Quantity {
 			// Get Product Type
 			$type = $product->product_type;
 			
-			// If Simple Add Input Box and Set dataquantity= min quantity
+			// If Simple Add Input Box and Set data-quantity = min quantity
 			if ( $type == 'simple' ){
-			
+
 				// Check if the Incremental Plugin is active and tailer link to that
 				if ( $this->incremental_active == false ) {
 					$inputbox = $this->print_input_box( null );
