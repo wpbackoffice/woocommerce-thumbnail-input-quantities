@@ -9,7 +9,7 @@ Requires at least: 2.3
 
 Tested up to: 3.81
 
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 
 License: GPLv2
 
@@ -50,6 +50,9 @@ The WooCommerce Thumbnail Input Quantities plugin automatically adds an input bo
 5. That’s it, you should now see input boxes next to the add to cart button in every simple product thumbnail
 
 ## Changelog 
+
+#### 1.1.1
+* Added Advanced Product Quantities support.
 
 #### 1.1.0 
 * Updated for WC 2.1.2
