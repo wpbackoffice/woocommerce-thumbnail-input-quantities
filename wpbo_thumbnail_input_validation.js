@@ -1,6 +1,6 @@
 jQuery(document).ready( function($) {
 	
-	$(".thumbnail-quantity ").change(function() {		
+	$(".thumbnail-quantity ").bind('mouseleave',function() {	
 
 		// Get values from input box
 		var new_qty = $(this).val();

@@ -4,7 +4,7 @@ Tags: woocommerce, product quantities, input values, product thumbnails
 Donate Link: http://wpbackoffice.com/plugins/woocommerce-thumbnail-input-quantities/
 Requires at least: 2.3
 Tested up to: 3.81
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ The WooCommerce Thumbnail Input Quantities plugin automatically adds an input bo
 Features
 
 * Simply activate the plugin and your ready to go
-* Built to work with [WooCommerce Incremental Product Quantities](http://wordpress.org/plugins/woocommerce-incremental-product-quantities/)
+* Built to work with [WooCommerce Advanced Product Quantities](http://wordpress.org/plugins/woocommerce-incremental-product-quantities/)
 * Only displays on simple products to avoid interfering with product variations
 
 [Plugin's Official Documentation and Support Page](http://www.wpbackoffice.com/plugins/woocommerce-thumbnail-input-quantities/)
@@ -43,6 +43,9 @@ Manual Installation
 5. That’s it, you should now see input boxes next to the add to cart button in every simple product thumbnail
 
 == Changelog ==
+
+= 1.1.1 =
+* Added Advanced Product Quantities support.
 
 = 1.1.0 =
 * Updated for WC 2.1.2
