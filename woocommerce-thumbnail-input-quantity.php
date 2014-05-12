@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Thumbnail Input Quantities
 Plugin URI: http://www.wpbackoffice.com/plugins/woocommerce-thumbnail-input-quantities/
 Description: Allow users to add multiple units of an item from its thumbnail, most commonly on the product category or related product sections. Works with WooCommerce Incremental Product Quantities plugin.
-Version: 1.1.1
+Version: 1.1.2
 Author: WP BackOffice
 Author URI: http://www.wpbackoffice.com
 */ 
