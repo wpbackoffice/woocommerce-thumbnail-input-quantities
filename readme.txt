@@ -4,7 +4,7 @@ Tags: woocommerce, product quantities, input values, product thumbnails
 Donate Link: http://wpbackoffice.com/plugins/woocommerce-thumbnail-input-quantities/
 Requires at least: 2.3
 Tested up to: 3.81
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

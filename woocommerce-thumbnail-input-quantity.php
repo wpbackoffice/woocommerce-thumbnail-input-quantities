@@ -137,6 +137,20 @@ class WooCommerce_Thumbnail_Input_Quantity {
 		global $product;
 		$rule = wpbo_get_applied_rule( $product );
 		$values = wpbo_get_value_from_rule( 'all', $product, $rule );
+		
+		// Check if the product is out of stock 
+		$stock = $product->get_stock_quantity();
+
+		// Check stock status and if Out try Out of Stock value	
+		if ( strlen( $stock ) != 0 and $stock <= 0 and isset( $values['min_oos'] ) and $values['min_oos'] != '' ) {
+			$values['min_value'] = $values['min_oos'];
+		}
+		
+		// Check stock status and if Out try Out of Stock value	
+		if ( strlen( $stock ) != 0 and $stock <= 0 and isset( $values['max_oos'] ) and $values['max_oos'] != '' ) {
+			$values['max_value'] = $values['max_oos'];
+		}
+		
 		return array( $this->print_input_box( $values ), $values );	
 	}	
 
