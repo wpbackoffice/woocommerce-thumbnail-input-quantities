@@ -109,11 +109,19 @@ class WooCommerce_Thumbnail_Input_Quantity {
 				} else {
 					$min = 1;
 				}
-		
-				// Add the data-quantity attribute to the button
-				$pos = strrpos( $text, "href" ); 
-				$text = substr($text, 0, $pos) . 'data-quantity="' . $min . '" ' . substr($text, $pos);
-				
+
+				// data-quantity attribute
+				if ( false === strpos( $text, 'data-quantity=' ) ) {
+					// The data-quantity attribute isn't already part of the button, so add it
+					$pos = strrpos( $text, "href" );
+					$text = substr($text, 0, $pos) . 'data-quantity="' . $min . '" ' . substr($text, $pos);
+				} else {
+					// The data-quantity attribute is already part of the button, so ensure the input box uses the same quantity
+					$values = wp_kses_hair( $text, array() );
+					$qty = isset( $values['data-quantity']['value'] ) ? $values['data-quantity']['value'] : 1;
+					$inputbox = str_replace( 'value="1"', 'value="' . $qty . '"', $inputbox );
+				}
+
 				// Concat inputbox and text
 				$text = $inputbox . $text;
 			}
