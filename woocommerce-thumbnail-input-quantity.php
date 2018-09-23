@@ -85,7 +85,7 @@ class WooCommerce_Thumbnail_Input_Quantity {
 		if ( $text != null and $product != null  ) {
 			
 			// Get Product Type
-			$type = $product->product_type;
+			$type = $product->get_type();
 			
 			// If Simple Add Input Box and Set data-quantity = min quantity
 			if ( $type == 'simple' ){
